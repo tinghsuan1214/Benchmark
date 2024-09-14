@@ -1,0 +1,93 @@
+--------------------Training--------------------
+arch_str :: |lstm_2~0|+|lstm_3~0|skip_connect~1|[dropout->linear->relu->dropout->linear]
+model :: 3L
+InferCell(
+  info :: nodes=3, inC=1, outC=64, [1<-(I0-L0) | 2<-(I0-L1,I1-L2)], genotype_str: lstm_2~0|lstm_3~0|skip_connect~1
+  linear_layers: [dropout->linear->relu->dropout->linear]
+  (layers): ModuleList(
+    (0): LSTM(
+      (lstm): LSTM(1, 64, num_layers=2, batch_first=True)
+    )
+    (1): LSTM(
+      (lstm): LSTM(1, 64, num_layers=3, batch_first=True)
+    )
+    (2): Identity()
+  )
+  (linear_layers): ModuleList(
+    (0): Dropout(p=0.1, inplace=False)
+    (1): Linear(in_features=3072, out_features=1536, bias=True)
+    (2): ReLU()
+    (3): Dropout(p=0.1, inplace=False)
+    (4): Linear(in_features=1536, out_features=1, bias=True)
+  )
+)
+tr_params :: epochs = 100, patience = 20, batch_size = 256, window_size = 48, data_size = 100
+Model MACs: 11.282M, Model Params: 4.856M
+learning rate scheduling :: (optimizer, mode='min', factor=0.1, patience=5, verbose=True)
+total_samples :: train_dataset = 2136000, train_dataloader = 2136000
+total_samples :: valid_dataset = 283200, valid_dataloader = 283200
+Epoch ::  1 || Loss: 0.42157722 || it_count: 8344 || Val Loss: 0.44940578 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 00:04:32.70
+Epoch ::  2 || Loss: 0.41572696 || it_count: 8344 || Val Loss: 0.45108015 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 00:09:1.91
+Epoch ::  3 || Loss: 0.41504275 || it_count: 8344 || Val Loss: 0.45010374 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 00:13:32.46
+Epoch ::  4 || Loss: 0.41418688 || it_count: 8344 || Val Loss: 0.44728685 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 00:18:5.48
+Epoch ::  5 || Loss: 0.41299980 || it_count: 8344 || Val Loss: 0.44961215 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 00:22:39.61
+Epoch ::  6 || Loss: 0.41194292 || it_count: 8344 || Val Loss: 0.45137368 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 00:27:13.79
+Epoch ::  7 || Loss: 0.41134565 || it_count: 8344 || Val Loss: 0.44947696 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 00:31:48.59
+Epoch ::  8 || Loss: 0.41056824 || it_count: 8344 || Val Loss: 0.45012298 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 00:36:23.81
+Epoch ::  9 || Loss: 0.40963562 || it_count: 8344 || Val Loss: 0.44997795 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 00:40:57.84
+Epoch :: 10 || Loss: 0.40889861 || it_count: 8344 || Val Loss: 0.45068935 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 00:45:33.13
+Epoch :: 11 || Loss: 0.40745776 || it_count: 8344 || Val Loss: 0.44874267 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 00:50:8.34
+Epoch :: 12 || Loss: 0.40647281 || it_count: 8344 || Val Loss: 0.44782771 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 00:54:41.70
+Epoch :: 13 || Loss: 0.40546564 || it_count: 8344 || Val Loss: 0.44960455 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 00:59:17.30
+Epoch :: 14 || Loss: 0.40421092 || it_count: 8344 || Val Loss: 0.44738635 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 01:03:52.48
+Epoch :: 15 || Loss: 0.40264214 || it_count: 8344 || Val Loss: 0.45132809 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 01:08:24.13
+Epoch :: 16 || Loss: 0.40093966 || it_count: 8344 || Val Loss: 0.44727858 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 01:12:54.49
+Epoch :: 17 || Loss: 0.39902805 || it_count: 8344 || Val Loss: 0.44800314 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 01:17:26.13
+Epoch :: 18 || Loss: 0.39688685 || it_count: 8344 || Val Loss: 0.44694727 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 01:21:58.34
+Epoch :: 19 || Loss: 0.39413895 || it_count: 8344 || Val Loss: 0.44835439 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 01:26:30.39
+Epoch :: 20 || Loss: 0.39156907 || it_count: 8344 || Val Loss: 0.44872110 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 01:31:1.93
+Epoch :: 21 || Loss: 0.38855037 || it_count: 8344 || Val Loss: 0.45037407 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 01:35:34.46
+Epoch :: 22 || Loss: 0.38544842 || it_count: 8344 || Val Loss: 0.45095435 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 01:40:8.06
+Epoch :: 23 || Loss: 0.38258378 || it_count: 8344 || Val Loss: 0.45342111 || Val it_count: 1107 || Current Learning Rate: 0.001 || Time: 01:44:41.73
+Epoch :: 24 || Loss: 0.37929659 || it_count: 8344 || Val Loss: 0.45494388 || Val it_count: 1107 || Current Learning Rate: 0.0001 || Time: 01:49:12.80
+Epoch :: 25 || Loss: 0.38952471 || it_count: 8344 || Val Loss: 0.43609829 || Val it_count: 1107 || Current Learning Rate: 0.0001 || Time: 01:53:45.39
+Epoch :: 26 || Loss: 0.38438483 || it_count: 8344 || Val Loss: 0.43472540 || Val it_count: 1107 || Current Learning Rate: 0.0001 || Time: 01:58:16.35
+Epoch :: 27 || Loss: 0.38137261 || it_count: 8344 || Val Loss: 0.43538356 || Val it_count: 1107 || Current Learning Rate: 0.0001 || Time: 02:02:48.19
+Epoch :: 28 || Loss: 0.37883196 || it_count: 8344 || Val Loss: 0.43527692 || Val it_count: 1107 || Current Learning Rate: 0.0001 || Time: 02:07:19.38
+Epoch :: 29 || Loss: 0.37671512 || it_count: 8344 || Val Loss: 0.43708778 || Val it_count: 1107 || Current Learning Rate: 0.0001 || Time: 02:11:51.75
+Epoch :: 30 || Loss: 0.37429636 || it_count: 8344 || Val Loss: 0.43762129 || Val it_count: 1107 || Current Learning Rate: 0.0001 || Time: 02:16:22.83
+Epoch :: 31 || Loss: 0.37267659 || it_count: 8344 || Val Loss: 0.43830082 || Val it_count: 1107 || Current Learning Rate: 0.0001 || Time: 02:20:52.06
+Epoch :: 32 || Loss: 0.37080945 || it_count: 8344 || Val Loss: 0.43881321 || Val it_count: 1107 || Current Learning Rate: 1e-05 || Time: 02:25:19.07
+Epoch :: 33 || Loss: 0.38524446 || it_count: 8344 || Val Loss: 0.42566013 || Val it_count: 1107 || Current Learning Rate: 1e-05 || Time: 02:29:52.29
+Epoch :: 34 || Loss: 0.38134905 || it_count: 8344 || Val Loss: 0.42498603 || Val it_count: 1107 || Current Learning Rate: 1e-05 || Time: 02:34:25.09
+Epoch :: 35 || Loss: 0.38045881 || it_count: 8344 || Val Loss: 0.42463926 || Val it_count: 1107 || Current Learning Rate: 1e-05 || Time: 02:38:55.17
+Epoch :: 36 || Loss: 0.38019005 || it_count: 8344 || Val Loss: 0.42453339 || Val it_count: 1107 || Current Learning Rate: 1e-05 || Time: 02:43:28.56
+Epoch :: 37 || Loss: 0.37952208 || it_count: 8344 || Val Loss: 0.42436683 || Val it_count: 1107 || Current Learning Rate: 1e-05 || Time: 02:48:0.91
+Epoch :: 38 || Loss: 0.37922864 || it_count: 8344 || Val Loss: 0.42457057 || Val it_count: 1107 || Current Learning Rate: 1e-05 || Time: 02:52:33.47
+Epoch :: 39 || Loss: 0.37904935 || it_count: 8344 || Val Loss: 0.42446733 || Val it_count: 1107 || Current Learning Rate: 1e-05 || Time: 02:57:5.15
+Epoch :: 40 || Loss: 0.37853583 || it_count: 8344 || Val Loss: 0.42442336 || Val it_count: 1107 || Current Learning Rate: 1e-05 || Time: 03:01:37.41
+Epoch :: 41 || Loss: 0.37828482 || it_count: 8344 || Val Loss: 0.42456594 || Val it_count: 1107 || Current Learning Rate: 1e-05 || Time: 03:06:10.05
+Epoch :: 42 || Loss: 0.37790617 || it_count: 8344 || Val Loss: 0.42460340 || Val it_count: 1107 || Current Learning Rate: 1e-05 || Time: 03:10:42.91
+Epoch :: 43 || Loss: 0.37805131 || it_count: 8344 || Val Loss: 0.42422637 || Val it_count: 1107 || Current Learning Rate: 1e-05 || Time: 03:15:15.20
+Epoch :: 44 || Loss: 0.37744534 || it_count: 8344 || Val Loss: 0.42464008 || Val it_count: 1107 || Current Learning Rate: 1e-05 || Time: 03:19:47.46
+Epoch :: 45 || Loss: 0.37730802 || it_count: 8344 || Val Loss: 0.42460020 || Val it_count: 1107 || Current Learning Rate: 1e-05 || Time: 03:24:19.31
+Epoch :: 46 || Loss: 0.37698246 || it_count: 8344 || Val Loss: 0.42469415 || Val it_count: 1107 || Current Learning Rate: 1e-05 || Time: 03:28:51.98
+Epoch :: 47 || Loss: 0.37681009 || it_count: 8344 || Val Loss: 0.42484765 || Val it_count: 1107 || Current Learning Rate: 1e-05 || Time: 03:33:23.90
+Epoch :: 48 || Loss: 0.37639029 || it_count: 8344 || Val Loss: 0.42493716 || Val it_count: 1107 || Current Learning Rate: 1e-05 || Time: 03:37:55.89
+Epoch :: 49 || Loss: 0.37615533 || it_count: 8344 || Val Loss: 0.42502794 || Val it_count: 1107 || Current Learning Rate: 1.0000000000000002e-06 || Time: 03:42:22.44
+Epoch :: 50 || Loss: 0.37782329 || it_count: 8344 || Val Loss: 0.42512021 || Val it_count: 1107 || Current Learning Rate: 1.0000000000000002e-06 || Time: 03:46:54.46
+Epoch :: 51 || Loss: 0.37737108 || it_count: 8344 || Val Loss: 0.42522355 || Val it_count: 1107 || Current Learning Rate: 1.0000000000000002e-06 || Time: 03:51:26.40
+Epoch :: 52 || Loss: 0.37723670 || it_count: 8344 || Val Loss: 0.42522741 || Val it_count: 1107 || Current Learning Rate: 1.0000000000000002e-06 || Time: 03:55:54.60
+Epoch :: 53 || Loss: 0.37679425 || it_count: 8344 || Val Loss: 0.42519404 || Val it_count: 1107 || Current Learning Rate: 1.0000000000000002e-06 || Time: 04:00:25.73
+Epoch :: 54 || Loss: 0.37695464 || it_count: 8344 || Val Loss: 0.42517887 || Val it_count: 1107 || Current Learning Rate: 1.0000000000000002e-06 || Time: 04:04:57.42
+Early stopping triggered due to learning rate below threshold.
+Done Total time: 04:09:29.56
+best_loss: 0.42422637436133287
+
+--------------------Testing--------------------
+
+total_samples :: test_dataset = 139200, test_dataloader = 139200
+Epoch ::  1 || Loss: 0.25315006 || it_count: 544 || Time: 00:00:13.77
+MAE:  0.26040187
+MSE:  0.253176
+RMSE:  0.45576206
