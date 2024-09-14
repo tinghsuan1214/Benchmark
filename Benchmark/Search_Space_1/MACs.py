@@ -21,5 +21,5 @@ def replace_flops_with_macs(directory):
                     print(f"Updated: {file_path}")
 
 # 指定根目錄路徑
-root_directory = 'C:/Users/tingh/OneDrive/桌面/git/Benchmark/Benchmark/Search_Space_1/Nodes_3/Linear_2/Linaer_2_1'
+root_directory = 'C:/Users/tingh/OneDrive/桌面/git/Benchmark/Benchmark/Search_Space_1/Nodes_3/Linear_1'
 replace_flops_with_macs(root_directory)
