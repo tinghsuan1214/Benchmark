@@ -7,7 +7,21 @@ Search Space 1 consists of architectures with either 2 or 3 nodes. For single ce
 
 ![image](https://github.com/tinghsuan1214/Benchmark/blob/main/Figure/search_space.jpg)
 ## Preparation and Download
-
+To set up your environment and start training on the ISET dataset, follow these steps:
+1. Create your Conda environment:
+   Install Anaconda or Miniconda on your system.
+   Download the env.yaml file provided in this repository.
+   Run the following command to create the virtual environment.
+```
+conda env create -f env.yaml
+```
+   Activate the virtual environment.
+```
+conda activate <environment_name>
+```
+3. Download the ISET Dataset
+   You can download the dataset from the link directly from the drive folder [here]([https://drive.google.com/drive/folders/1e633nQBwTdWP2EkYC2D-zKKId8hh7DIK](https://drive.google.com/drive/folders/1e633nQBwTdWP2EkYC2D-zKKId8hh7DIK)).
+   
 ## How to Use NAS-Bench-STLF
 ### Architecture string explanation
 
