@@ -5,7 +5,7 @@ This repository contains a benchmark dataset and code for evaluating neural netw
 
 Search Space 1 consist of architectures with either 2 or 3 nodes. In the case of single cell, Search Space 1 has 100 architectures with 2 nodes and 2,500 architectures with 3 nodes. This results in a total of 2,600 single-cell architectures.
 
-##Citation
+## Citation
 If you find that NAS-Bench-STLF helps your research, please consider citing it:
 ```
 @inproceedings{dong2020nasbench201,
