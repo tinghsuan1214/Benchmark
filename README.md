@@ -24,7 +24,10 @@ node-2: lstm_3(node-0) + lstm_2(node-1) represents a three-layer LSTM applied to
 node-3: skip-connect(node-0) + conv-3x3(node-1) + skip-connect(node-2) represents a skip connection from node-0 to node-3, along with a convolutional operation on node-1 and another skip connection from node-2.
 ```
 2. Chain-structured Design
-The sequence `[dropout->linear->relu->dropout->linear]` represents the fully connected layer structure. The operations are performed in the following order: Dropout, Linear, ReLU, another Dropout, and finally, Linear.
+```
+[dropout->linear->relu->dropout->linear]
+```
+represents the fully connected layer structure. The operations are performed in the following order: Dropout, Linear, ReLU, another Dropout, and finally, Linear.
 
 This model combines the Cell-based structure and Chain-structured design to handle multi-layered time series data, providing output predictions. Below is an example of how this model is represented programmatically, using two `nn.ModuleList` objects:
 
