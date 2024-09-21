@@ -13,7 +13,7 @@ Search Space 1 consists of architectures with either 2 or 3 nodes. For single ce
 
 The string:
 
-`|lstm_1~0|+|lstm_3~0|lstm_2~1|+|none~0|skip_connect~1||lstm_3~2|[dropout->linear->relu->dropout->linear]` means:
+`|lstm_1~0|+|lstm_3~0|lstm_2~1|+|none~0|skip_connect~1||lstm_3~2|[dropout->linear->relu->dropout->linear]`
 represents a neural network architecture that combines both cell-based and chain-structured designs. The detailed explanation of this architecture is as follows:
 
 1. Cell-based Structure
