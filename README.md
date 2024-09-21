@@ -20,7 +20,7 @@ conda env create -f env.yaml
 conda activate <environment_name>
 ```
 3. Download the ISET Dataset
-   You can download the dataset from the link directly from the drive folder [here]([https://drive.google.com/drive/folders/1e633nQBwTdWP2EkYC2D-zKKId8hh7DIK](https://drive.google.com/drive/folders/1e633nQBwTdWP2EkYC2D-zKKId8hh7DIK)).
+   You can download the dataset from the link directly from the drive folder [this link]([https://drive.google.com/drive/folders/1e633nQBwTdWP2EkYC2D-zKKId8hh7DIK](https://drive.google.com/drive/folders/1e633nQBwTdWP2EkYC2D-zKKId8hh7DIK)).
    
 ## How to Use NAS-Bench-STLF
 ### Architecture string explanation
