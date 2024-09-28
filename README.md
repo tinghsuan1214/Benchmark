@@ -22,6 +22,7 @@ conda activate <environment_name>
 3. Download the ISET Dataset
    You can download the dataset from the link directly from the drive folder here.
    https://drive.google.com/drive/folders/1e633nQBwTdWP2EkYC2D-zKKId8hh7DIK
+   
 
 <!-- 4. Pre-trained model
    You can download the dataset from the link directly from the drive folder here.
@@ -29,6 +30,8 @@ conda activate <environment_name>
    
 ## How to Use NAS-Bench-STLF
 ### Architecture string explanation
+
+Performance indicators of the corresponding architecture can be obtained through table lookup.
 
 The string:
 
