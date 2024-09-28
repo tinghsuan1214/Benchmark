@@ -25,7 +25,7 @@ conda activate <environment_name>
 
 4. Pre-trained model
    You can download the dataset from the link directly from the drive folder here.
-   https://drive.google.com/drive/folders/1mNhrWyQygFfsTZ37nvITJNxrHMDWXg_Q?usp=drive_link
+   https://drive.google.com/drive/folders/1vbDJNpT2Ie0V3D8G6Pmj1d02cxm4t_BU?usp=sharing
    
 ## How to Use NAS-Bench-STLF
 ### Architecture string explanation
