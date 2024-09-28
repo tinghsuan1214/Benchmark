@@ -29,9 +29,11 @@ conda activate <environment_name>
    https://drive.google.com/drive/folders/1vbDJNpT2Ie0V3D8G6Pmj1d02cxm4t_BU?usp=drive_link -->
    
 ## How to Use NAS-Bench-STLF
-### Architecture string explanation
+### Download Benchmark CSV
 
 Performance indicators of the corresponding architecture can be obtained through table lookup.
+
+### Architecture string explanation
 
 The string:
 
