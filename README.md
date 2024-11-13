@@ -1,4 +1,4 @@
-# Benchmark for Neural Architecture Search (NAS) on Short-Term Load Forecasting (STLF)
+# A Training-free Neural Architecture Search for Electricity Load Prediction
 We present a NAS benchmark that incorporates a hierarchical search space, which combines cell-based and chain-structured architectures. This design is essential to NAS, defining a total of 2,600 possible architectures, and offers a comprehensive benchmark for NAS applications in smart grids (SG).
 
 This repository provides a benchmark dataset and code for evaluating neural network architectures, specifically in the context of short-term load forecasting.
@@ -86,9 +86,9 @@ InferCell(
 ## Citation
 If you find that NAS-Bench-STLF helps your research, please consider citing it:
 ```
-@inproceedings{dong2020nasbench201,
-  title     = {Benchmark for Neural Architecture Search (NAS) on Short-Term Load Forecasting (STLF)},
-  author    = {Pei, Ting-Hsuan and Tsai, Chun-Wei},
+@inproceedings{XXX,
+  title     = {A Training-free Neural Architecture Search for Electricity Load Prediction},
+  author    = {Pei, Ting-Hsuan, Gagan Vishwakarma and Tsai, Chun-Wei},
   booktitle = {...},
   url       = {https://...},
   year      = {2024}
