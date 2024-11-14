@@ -5,7 +5,7 @@ This repository provides a benchmark dataset and code for evaluating neural netw
 
 Search Space 1 consists of architectures with either 2 or 3 nodes. For single cells, it includes 100 architectures with 2 nodes and 2,500 architectures with 3 nodes, resulting in a total of 2,600 single-cell architectures.
 
-![image](https://github.com/tinghsuan1214/Benchmark/blob/main/Figure/search_space.jpg)
+![image](https://github.com/tinghsuan1214/Benchmark/blob/main/Figure/the_def_space_page.jpg)
 ## Preparation and Download
 To set up your environment and start training on the ISET dataset, follow these steps:
 1. Create your Conda environment:
