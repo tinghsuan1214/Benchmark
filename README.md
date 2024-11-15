@@ -6,7 +6,7 @@ This repository provides a benchmark dataset and code for evaluating neural netw
 Search Space 1 consists of architectures with either 2 or 3 nodes. For single cells, it includes 100 architectures with 2 nodes and 2,500 architectures with 3 nodes, resulting in a total of 2,600 single-cell architectures.
 
 ![image](https://github.com/tinghsuan1214/Benchmark/blob/main/Figure/the_def_space_page.jpg)
-## Preparation and Download
+<!-- ## Preparation and Download
 To set up your environment and start training on the ISET dataset, follow these steps:
 1. Create your Conda environment:
    Install Anaconda or Miniconda on your system.
@@ -26,7 +26,7 @@ conda activate <environment_name>
 
 <!-- 4. Pre-trained model
    You can download the dataset from the link directly from the drive folder here.
-   https://drive.google.com/drive/folders/1vbDJNpT2Ie0V3D8G6Pmj1d02cxm4t_BU?usp=drive_link -->
+   https://drive.google.com/drive/folders/1vbDJNpT2Ie0V3D8G6Pmj1d02cxm4t_BU?usp=drive_link --> -->
    
 ## How to Use NAS-Bench-STLF
 ### Download Benchmark CSV
@@ -83,7 +83,7 @@ InferCell(
   )
 )
 ```
-## Citation
+<!-- ## Citation
 If you find that NAS-Bench-STLF helps your research, please consider citing it:
 ```
 @inproceedings{XXX,
@@ -93,4 +93,4 @@ If you find that NAS-Bench-STLF helps your research, please consider citing it:
   url       = {https://...},
   year      = {2024}
 }
-```
+``` -->
